@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dalle Restro | Ultra Luxury Dining</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root { --gold:#d4af37; }
+
+body {
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(#0f0f0f,#1a1a1a);
+color:white;
+}
+
+/* HERO */
+header {
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+header h1 {
+font-family:'Playfair Display';
+font-size:4rem;
+}
+
+.reserve-btn {
+margin-top:20px;
+padding:14px 30px;
+border-radius:30px;
+border:none;
+background:var(--gold);
+cursor:pointer;
+}
+
+/* MAIN TABS */
+.menu-tabs {
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.tab-btn {
+padding:12px 22px;
+margin:5px;
+border-radius:25px;
+border:none;
+background:rgba(255,255,255,0.1);
+color:white;
+cursor:pointer;
+}
+
+.tab-btn.active {
+background:gold;
+color:black;
+}
+
+/* SUB TABS */
+.sub-tabs {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+margin:20px 0;
+}
+
+.sub-tabs button {
+margin:5px;
+padding:8px 15px;
+border:none;
+border-radius:20px;
+background:rgba(255,255,255,0.1);
+color:white;
+cursor:pointer;
+}
+
+.sub-tabs button.active {
+background:gold;
+color:black;
+}
+
+/* CONTENT */
+.container { max-width:1100px; margin:60px auto; padding:20px; }
+
+.tab-content { display:none; }
+.tab-content.active { display:block; }
+
+.sub-content { display:none; }
+.sub-content.active { display:block; }
+
+/* MENU */
+.menu-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.menu-item {
+padding:20px;
+border-radius:15px;
+background:rgba(255,255,255,0.05);
+transition:0.3s;
+}
+
+.menu-item:hover {
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(212,175,55,0.3);
+}
+
+.price { color:gold; }
+
+.menu-item p {
+font-size:13px;
+opacity:0.75;
+}
+
+/* FOOTER */
+footer {
+text-align:center;
+padding:30px;
+border-top:1px solid #333;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div>
+<h1>Dalle Restro</h1>
+<p>Nature Inspired Luxury Dining</p>
+
+<button class="reserve-btn" onclick="whatsapp()">Reserve via WhatsApp</button>
+
+<div class="menu-tabs">
+<button class="tab-btn active" onclick="openTab(event,'food')">🍽 Food</button>
+<button class="tab-btn" onclick="openTab(event,'beverages')">🥤 Beverages</button>
+<button class="tab-btn" onclick="openTab(event,'liquor')">🍷 Liquor</button>
+<button class="tab-btn" onclick="openTab(event,'hookah')">💨 Hookah</button>
+</div>
+</div>
+</header>
+
+<div class="container">
+
+<!-- FOOD -->
+<div id="food" class="tab-content active">
+
+<div class="sub-tabs">
+<button class="active" onclick="openSub(event,'appetizers')">Appetizers</button>
+<button onclick="openSub(event,'main')">Main Course</button>
+<button onclick="openSub(event,'momos')">Momos</button>
+<button onclick="openSub(event,'noodles')">Noodles</button>
+<button onclick="openSub(event,'local')">Local Taste</button>
+<button onclick="openSub(event,'fastfood')">Pizza/Burger</button>
+<button onclick="openSub(event,'kids')">Kids</button>
+<button onclick="openSub(event,'snacks')">Snacks</button>
+</div>
+
+<!-- APPETIZERS -->
+<div id="appetizers" class="sub-content active">
+<div class="menu-grid">
+<!-- Veg -->
+<div class="menu-item veg"><h3>French Fries</h3><div class="price">Rs 195</div></div>
+<div class="menu-item veg"><h3>Paneer Chilli</h3><div class="price">Rs 395</div></div>
+<div class="menu-item veg"><h3>Mushroom Chilli</h3><div class="price">Rs 325</div></div>
+<div class="menu-item veg"><h3>Peri Peri Fries</h3><div class="price">Rs 245</div></div>
+<div class="menu-item veg"><h3>Veg Pakoda</h3><div class="price">Rs 295</div></div>
+<div class="menu-item veg"><h3>Paneer Pakoda</h3><div class="price">Rs 395</div></div>
+<div class="menu-item veg"><h3>French Fries Loaded Cheese</h3><div class="price">Rs 295</div></div>
+<div class="menu-item veg"><h3>Mix Veg Saute</h3><div class="price">Rs 295</div></div>
+<div class="menu-item veg"><h3>Crispy Chilli Babycorn</h3><div class="price">Rs 395</div></div>
+<div class="menu-item veg"><h3>Chips Chilli</h3><div class="price">Rs 295</div></div>
+<div class="menu-item veg"><h3>Boil Corn Saute</h3><div class="price">Rs 295</div></div>
+<div class="menu-item veg"><h3>Salt and Pepper Corn</h3><div class="price">Rs 325</div></div>
+
+<!-- Non-Veg -->
+<div class="menu-item nonveg"><h3>Chicken Chilli</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Lasha Pork</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Sausage Fry</h3><div class="price">Rs 325</div></div>
+<div class="menu-item nonveg"><h3>Buff Chilli</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Chicken Lollipop</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Chicken Drumstick</h3><div class="price">Rs 455</div></div>
+<div class="menu-item nonveg"><h3>Hot Garlic Wings</h3><div class="price">Rs 455</div></div>
+<div class="menu-item nonveg"><h3>Timur Chicken</h3><div class="price">Rs 425</div></div>
+<div class="menu-item nonveg"><h3>Chicken Steak</h3><div class="price">Rs 595</div></div>
+<div class="menu-item nonveg"><h3>Dragon Chicken</h3><div class="price">Rs 455</div></div>
+<div class="menu-item nonveg"><h3>Szechuan Chicken</h3><div class="price">Rs 455</div></div>
+<div class="menu-item nonveg"><h3>Hot Garlic Prawn</h3><div class="price">Rs 855</div></div>
+<div class="menu-item nonveg"><h3>Grilled Prawn</h3><div class="price">Rs 855</div></div>
+<div class="menu-item nonveg"><h3>Kung Pao Chicken</h3><div class="price">Rs 555</div></div>
+<div class="menu-item nonveg"><h3>Hoisin Chicken</h3><div class="price">Rs 495</div></div>
+<div class="menu-item nonveg"><h3>Harisha Chicken</h3><div class="price">Rs 495</div></div>
+<div class="menu-item nonveg"><h3>Grilled Fish</h3><div class="price">Rs 695</div></div>
+<div class="menu-item nonveg"><h3>Chicken Sizzler</h3><div class="price">Rs 555</div></div>
+</div>
+</div>
+
+<!-- MAIN COURSE -->
+<div id="main" class="sub-content">
+<div class="menu-grid">
+<!-- Fried Rice -->
+<div class="menu-item"><h3>Egg Fried Rice</h3><div class="price">Rs 275</div></div>
+<div class="menu-item"><h3>Veg Fried Rice</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Chicken Fried Rice</h3><div class="price">Rs 355</div></div>
+<div class="menu-item"><h3>Buff Fried Rice</h3><div class="price">Rs 355</div></div>
+<div class="menu-item"><h3>Mix Fried Rice</h3><div class="price">Rs 425</div></div>
+<div class="menu-item"><h3>Szechuan Veg Rice</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Szechuan Chicken Rice</h3><div class="price">Rs 395</div></div>
+<div class="menu-item"><h3>Szechuan Buff Rice</h3><div class="price">Rs 395</div></div>
+<div class="menu-item"><h3>Szechuan Mix Rice</h3><div class="price">Rs 455</div></div>
+<div class="menu-item"><h3>Dhawa Veg Rice</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Dhawa Chicken Rice</h3><div class="price">Rs 395</div></div>
+<div class="menu-item"><h3>Dhawa Buff Rice</h3><div class="price">Rs 395</div></div>
+<div class="menu-item"><h3>Dhawa Mix Rice</h3><div class="price">Rs 455</div></div>
+
+<!-- Non-Veg Mix Saute -->
+<div class="menu-item nonveg"><h3>Non Veg Mix Saute</h3><div class="price">Rs 495</div></div>
+<div class="menu-item nonveg"><h3>Royal Chicken</h3><div class="price">Rs 755</div></div>
+<div class="menu-item nonveg"><h3>Chicken Cordon Bleu</h3><div class="price">Rs 755</div></div>
+<div class="menu-item nonveg"><h3>Grilled Chicken</h3><div class="price">Rs 495</div></div>
+
+<!-- Biryani -->
+<div class="menu-item veg"><h3>Veg Biryani</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Chicken Biryani</h3><div class="price">Rs 595</div></div>
+</div>
+</div>
+
+<!-- Continue same pattern for MOMOS, NOODLES, LOCAL TASTE, FAST FOOD, KIDS, SNACKS -->
+
+<!-- Example: MOMOS -->
+<div id="momos" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item veg"><h3>Steam Veg Momo</h3><div class="price">Rs 255</div></div>
+<div class="menu-item nonveg"><h3>Steam Chicken Momo</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Steam Buff Momo</h3><div class="price">Rs 295</div></div>
+<div class="menu-item veg"><h3>Fried Veg Momo</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Fried Chicken Momo</h3><div class="price">Rs 325</div></div>
+<div class="menu-item nonveg"><h3>Fried Buff Momo</h3><div class="price">Rs 325</div></div>
+<div class="menu-item veg"><h3>Jhol Veg Momo</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Jhol Chicken Momo</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Jhol Buff Momo</h3><div class="price">Rs 355</div></div>
+<div class="menu-item veg"><h3>Chilli Veg Momo</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Chilli Chicken Momo</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Chilli Buff Momo</h3><div class="price">Rs 355</div></div>
+<div class="menu-item veg"><h3>Kothey Veg Momo</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Kothey Chicken Momo</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Kothey Buff Momo</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Golden Cheese Chicken Momo</h3><div class="price">Rs 395</div></div>
+</div>
+</div>
+
+<!-- YOU CAN FOLLOW SAME PATTERN FOR OTHER SUB-TABS (NOODLES, LOCAL, FASTFOOD, KIDS, SNACKS) -->
+<!-- NOODLES -->
+<div id="noodles" class="sub-content">
+<div class="menu-grid">
+<!-- Hakka Noodles -->
+<div class="menu-item veg"><h3>Hakka Veg Noodles</h3><div class="price">Rs 255</div></div>
+<div class="menu-item nonveg"><h3>Hakka Chicken Noodles</h3><div class="price">Rs 325</div></div>
+<div class="menu-item nonveg"><h3>Hakka Buff Noodles</h3><div class="price">Rs 325</div></div>
+<div class="menu-item nonveg"><h3>Hakka Mix Noodles</h3><div class="price">Rs 395</div></div>
+<div class="menu-item veg"><h3>Hakka Egg Noodles</h3><div class="price">Rs 295</div></div>
+
+<!-- Szechuan Noodles -->
+<div class="menu-item veg"><h3>Szechuan Veg Noodles</h3><div class="price">Rs 285</div></div>
+<div class="menu-item nonveg"><h3>Szechuan Chicken Noodles</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Szechuan Buff Noodles</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Szechuan Mix Noodles</h3><div class="price">Rs 425</div></div>
+
+<!-- Ramen Noodles -->
+<div class="menu-item veg"><h3>Ramen Veg Noodles</h3><div class="price">Rs 325</div></div>
+<div class="menu-item nonveg"><h3>Ramen Chicken Noodles</h3><div class="price">Rs 425</div></div>
+<div class="menu-item nonveg"><h3>Ramen Pork Noodles</h3><div class="price">Rs 425</div></div>
+<div class="menu-item nonveg"><h3>Ramen Sausage Noodles</h3><div class="price">Rs 425</div></div>
+<div class="menu-item nonveg"><h3>Ramen Mix Noodles</h3><div class="price">Rs 495</div></div>
+
+<!-- Keema Noodles -->
+<div class="menu-item nonveg"><h3>Buff Keema Noodles</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Chicken Keema Noodles</h3><div class="price">Rs 395</div></div>
+</div>
+</div>
+
+<!-- LOCAL TASTE -->
+<div id="local" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item veg"><h3>Mushroom Choila</h3><div class="price">Rs 355</div></div>
+<div class="menu-item veg"><h3>Plain Peanut</h3><div class="price">Rs 195</div></div>
+<div class="menu-item nonveg"><h3>Chicken Choila</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Buff Choila</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Buff Kemma Egg Fry</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Chicken Keema Egg Fry</h3><div class="price">Rs 295</div></div>
+<div class="menu-item nonveg"><h3>Chicken Poleko Moleko</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Pork Poleko Moleko</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Chicken Khaja Set</h3><div class="price">Rs 495</div></div>
+<div class="menu-item nonveg"><h3>Buff Khaja Set</h3><div class="price">Rs 495</div></div>
+<div class="menu-item nonveg"><h3>Chicken Sekuwa</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Chicken Roast</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Pangra Fry</h3><div class="price">Rs 325</div></div>
+<div class="menu-item nonveg"><h3>Buff Sukuti</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Buff Aalu Chura</h3><div class="price">Rs 425</div></div>
+<div class="menu-item veg"><h3>Chana Kerau Sadheko</h3><div class="price">Rs 195</div></div>
+<div class="menu-item nonveg"><h3>Badel Dameko</h3><div class="price">Rs 600</div></div>
+</div>
+</div>
+
+<!-- FAST FOOD: PIZZAS, BAO, BURGERS -->
+<div id="fastfood" class="sub-content">
+<div class="menu-grid">
+<!-- Pizzas -->
+<div class="menu-item veg"><h3>Mix Veg Pizza</h3><div class="price">Rs 795</div></div>
+<div class="menu-item nonveg"><h3>Chicken Pizza</h3><div class="price">Rs 995</div></div>
+<div class="menu-item nonveg"><h3>Meat Lover Pizza</h3><div class="price">Rs 1095</div></div>
+<div class="menu-item nonveg"><h3>Mix Pizza</h3><div class="price">Rs 1095</div></div>
+<div class="menu-item veg"><h3>Cheese Pizza</h3><div class="price">Rs 895</div></div>
+
+<!-- Bao -->
+<div class="menu-item nonveg"><h3>Crispy Chicken Bao</h3><div class="price">Rs 595</div></div>
+<div class="menu-item nonveg"><h3>Juicy Pork Bao</h3><div class="price">Rs 595</div></div>
+
+<!-- Burgers -->
+<div class="menu-item nonveg"><h3>Grilled Chicken Burger</h3><div class="price">Rs 495</div></div>
+<div class="menu-item nonveg"><h3>Crispy Chicken Burger</h3><div class="price">Rs 455</div></div>
+<div class="menu-item nonveg"><h3>Buff Burger</h3><div class="price">Rs 525</div></div>
+<div class="menu-item veg"><h3>Veg Burger</h3><div class="price">Rs 355</div></div>
+</div>
+</div>
+
+<!-- KIDS MENU -->
+<div id="kids" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item veg"><h3>Boil Corn</h3><div class="price">Rs 245</div></div>
+<div class="menu-item nonveg"><h3>Chicken Nuggets</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Crispy Chicken</h3><div class="price">Rs 395</div></div>
+<div class="menu-item nonveg"><h3>Fish Finger</h3><div class="price">Rs 445</div></div>
+<div class="menu-item nonveg"><h3>Chicken Kurkure</h3><div class="price">Rs 395</div></div>
+</div>
+</div>
+
+<!-- SNACKS / SADHEKO / CHOPSUEY -->
+<div id="snacks" class="sub-content">
+<div class="menu-grid">
+<!-- Sadheko -->
+<div class="menu-item veg"><h3>Wai Wai Sadheko</h3><div class="price">Rs 125</div></div>
+<div class="menu-item veg"><h3>Peanut Sadheko</h3><div class="price">Rs 195</div></div>
+<div class="menu-item veg"><h3>Bhatmas Sadheko</h3><div class="price">Rs 195</div></div>
+<div class="menu-item veg"><h3>Aalu Sadheko</h3><div class="price">Rs 195</div></div>
+<div class="menu-item nonveg"><h3>Chicken Sadheko</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Buff Sadheko</h3><div class="price">Rs 395</div></div>
+
+<!-- Chopsuey -->
+<div class="menu-item veg"><h3>American Veg Chopsuey</h3><div class="price">Rs 345</div></div>
+<div class="menu-item nonveg"><h3>American Chicken Chopsuey</h3><div class="price">Rs 425</div></div>
+<div class="menu-item veg"><h3>Chinese Veg Chopsuey</h3><div class="price">Rs 355</div></div>
+<div class="menu-item nonveg"><h3>Chicken Chopsuey</h3><div class="price">Rs 495</div></div>
+</div>
+</div>
+
+</div>
+
+<!-- BEVERAGES -->
+<div id="beverages" class="tab-content">
+<h2>Beverages</h2>
+</div>
+
+<!-- LIQUOR -->
+<div id="liquor" class="tab-content">
+<h2>Liquor</h2>
+</div>
+
+<!-- HOOKAH -->
+<div id="hookah" class="tab-content">
+<h2>Hookah</h2>
+</div>
+
+</div>
+
+<footer>
+<p>📍 Bharatpur-11, Chitwan</p>
+<p>📞 9769460173</p>
+</footer>
+
+<script>
+function whatsapp(){
+window.open("https://wa.me/9779769460173");
+}
+
+/* MAIN TAB */
+function openTab(e,tab){
+document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+document.getElementById(tab).classList.add('active');
+e.currentTarget.classList.add('active');
+}
+
+/* SUB TAB */
+function openSub(e,tab){
+document.querySelectorAll('.sub-content').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.sub-tabs button').forEach(b=>b.classList.remove('active'));
+document.getElementById(tab).classList.add('active');
+e.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
