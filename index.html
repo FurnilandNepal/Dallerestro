@@ -367,8 +367,151 @@ border-top:1px solid #333;
 </div>
 
 <!-- BEVERAGES -->
+<!-- BEVERAGES -->
 <div id="beverages" class="tab-content">
-<h2>Beverages</h2>
+
+<div class="sub-tabs">
+<button class="active" onclick="openSub(event,'coffee')">Coffee</button>
+<button onclick="openSub(event,'frappe')">Frappes</button>
+<button onclick="openSub(event,'smoothies')">Smoothies</button>
+<button onclick="openSub(event,'tea')">Tea & Drinks</button>
+<button onclick="openSub(event,'milkshake')">Milkshakes</button>
+<button onclick="openSub(event,'lassi')">Lassi</button>
+<button onclick="openSub(event,'blended')">Blended</button>
+<button onclick="openSub(event,'lemonade')">Lemonade</button>
+<button onclick="openSub(event,'mocktails')">Mocktails</button>
+<button onclick="openSub(event,'bubble')">Bubble Tea</button>
+</div>
+
+<!-- COFFEE -->
+<div id="coffee" class="sub-content active">
+<div class="menu-grid">
+<div class="menu-item"><h3>Espresso</h3><div class="price">Rs 115</div></div>
+<div class="menu-item"><h3>Double Espresso</h3><div class="price">Rs 135</div></div>
+<div class="menu-item"><h3>Latte</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Americano (Single)</h3><div class="price">Rs 125</div></div>
+<div class="menu-item"><h3>Americano (Double)</h3><div class="price">Rs 145</div></div>
+<div class="menu-item"><h3>Lungo</h3><div class="price">Rs 145</div></div>
+<div class="menu-item"><h3>Flat White</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Cappuccino</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>V60</h3><div class="price">Rs 245</div></div>
+<div class="menu-item"><h3>Iced Americano</h3><div class="price">Rs 155</div></div>
+<div class="menu-item"><h3>Iced Cappuccino</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Iced Latte</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Iced Flavoured Latte</h3><div class="price">Rs 285</div></div>
+<div class="menu-item"><h3>Iced Macchiato</h3><div class="price">Rs 285</div></div>
+</div>
+</div>
+
+<!-- FRAPPE -->
+<div id="frappe" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Oreo Frappe</h3><div class="price">Rs 315</div></div>
+<div class="menu-item"><h3>Mocha Frappe</h3><div class="price">Rs 315</div></div>
+<div class="menu-item"><h3>Kitkat Frappe</h3><div class="price">Rs 315</div></div>
+<div class="menu-item"><h3>Vanilla Frappe</h3><div class="price">Rs 315</div></div>
+<div class="menu-item"><h3>Caramel Frappe</h3><div class="price">Rs 315</div></div>
+</div>
+</div>
+
+<!-- SMOOTHIES -->
+<div id="smoothies" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Banana Smoothie</h3><div class="price">Rs 225</div></div>
+<div class="menu-item"><h3>Mango Smoothie</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Blueberry Smoothie</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Strawberry Smoothie</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Caramel Apple Smoothie</h3><div class="price">Rs 285</div></div>
+<div class="menu-item"><h3>Coffee Smoothie</h3><div class="price">Rs 255</div></div>
+</div>
+</div>
+
+<!-- TEA & DRINKS -->
+<div id="tea" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Lemon Tea</h3><div class="price">Rs 45</div></div>
+<div class="menu-item"><h3>Milk Tea</h3><div class="price">Rs 75</div></div>
+<div class="menu-item"><h3>Black Tea</h3><div class="price">Rs 55</div></div>
+<div class="menu-item"><h3>Green Tea (Rakura)</h3><div class="price">Rs 45</div></div>
+<div class="menu-item"><h3>Hot Lemon with Honey</h3><div class="price">Rs 145</div></div>
+<div class="menu-item"><h3>Mineral Water</h3><div class="price">Rs 35</div></div>
+<div class="menu-item"><h3>Hot Chocolate</h3><div class="price">Rs 175</div></div>
+<div class="menu-item"><h3>Coke / Fanta / Sprite</h3><div class="price">Rs 85</div></div>
+<div class="menu-item"><h3>Jumbo (2L)</h3><div class="price">Rs 355</div></div>
+<div class="menu-item"><h3>Peach Iced Tea</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Lemon Iced Tea</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Apple Iced Tea</h3><div class="price">Rs 195</div></div>
+</div>
+</div>
+
+<!-- MILKSHAKES -->
+<div id="milkshake" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Vanilla Milkshake</h3><div class="price">Rs 245</div></div>
+<div class="menu-item"><h3>Oreo Milkshake</h3><div class="price">Rs 275</div></div>
+<div class="menu-item"><h3>Kitkat Milkshake</h3><div class="price">Rs 285</div></div>
+<div class="menu-item"><h3>Banana Milkshake</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Mango Milkshake</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Chocolate Milkshake</h3><div class="price">Rs 255</div></div>
+<div class="menu-item"><h3>Cream Milkshake</h3><div class="price">Rs 255</div></div>
+</div>
+</div>
+
+<!-- LASSI -->
+<div id="lassi" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Plain Lassi</h3><div class="price">Rs 185</div></div>
+<div class="menu-item"><h3>Banana Lassi</h3><div class="price">Rs 225</div></div>
+<div class="menu-item"><h3>Mango Lassi</h3><div class="price">Rs 245</div></div>
+</div>
+</div>
+
+<!-- BLENDED -->
+<div id="blended" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Blended Mocha</h3><div class="price">Rs 245</div></div>
+<div class="menu-item"><h3>Blended Mocha Madness</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Blended Mojito</h3><div class="price">Rs 245</div></div>
+<div class="menu-item"><h3>Blended Oreo</h3><div class="price">Rs 285</div></div>
+<div class="menu-item"><h3>Blended Lemonade</h3><div class="price">Rs 285</div></div>
+</div>
+</div>
+
+<!-- LEMONADE -->
+<div id="lemonade" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Classic Lemonade</h3><div class="price">Rs 195</div></div>
+<div class="menu-item"><h3>Mint Lemonade</h3><div class="price">Rs 165</div></div>
+<div class="menu-item"><h3>Apple Lemonade</h3><div class="price">Rs 225</div></div>
+<div class="menu-item"><h3>Orange Lemonade</h3><div class="price">Rs 225</div></div>
+<div class="menu-item"><h3>Hangover Lemonade</h3><div class="price">Rs 195</div></div>
+</div>
+</div>
+
+<!-- MOCKTAILS -->
+<div id="mocktails" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Virgin Mojito</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Blue Lagoon</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Virgin Shirley Temple</h3><div class="price">Rs 325</div></div>
+<div class="menu-item"><h3>Blueberry Mojito</h3><div class="price">Rs 325</div></div>
+<div class="menu-item"><h3>Pina Colada</h3><div class="price">Rs 355</div></div>
+<div class="menu-item"><h3>Strawberry Rush</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Watermelon Mojito</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Lime Punch Mojito</h3><div class="price">Rs 295</div></div>
+<div class="menu-item"><h3>Orange Mojito</h3><div class="price">Rs 295</div></div>
+</div>
+</div>
+
+<!-- BUBBLE TEA -->
+<div id="bubble" class="sub-content">
+<div class="menu-grid">
+<div class="menu-item"><h3>Vanilla Bubble Tea</h3><div class="price">Rs 215</div></div>
+<div class="menu-item"><h3>Blueberry Bubble Tea</h3><div class="price">Rs 215</div></div>
+<div class="menu-item"><h3>Extra Bobba</h3><div class="price">Rs 55</div></div>
+</div>
+</div>
+
 </div>
 
 <!-- LIQUOR -->
